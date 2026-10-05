@@ -1,0 +1,18 @@
+# Xcode
+.DS_Store
+DerivedData/
+*.xcuserstate
+xcuserdata/
+
+# Локальные сборочные артефакты
+build/
+dist/
+
+# Swift Package Manager
+.build/
+
+# Временные файлы и резервные копии патчей
+*.bak
+*.tmp
+.r1-*-backup-*/
+.r1-*-last-backup
