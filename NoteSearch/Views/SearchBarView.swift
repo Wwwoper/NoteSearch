@@ -35,6 +35,12 @@ struct SearchBarView: View {
                             .foregroundColor(.secondary)
                     }
                     .buttonStyle(.plain)
+                    Button(action: { appState.toggleExactPhrase() }) {
+                        Image(systemName: "text.quote")
+                            .foregroundColor(.secondary)
+                    }
+                    .buttonStyle(.plain)
+                    .help("Точная фраза (⌘')")
                 }
 
                 Spacer()
@@ -78,6 +84,8 @@ struct SearchBarView: View {
                     .keyboardShortcut("k", modifiers: .command)
                 Button("") { appState.clearSearch() }
                     .keyboardShortcut(.delete, modifiers: .command)
+                Button("") { appState.toggleExactPhrase() }
+                    .keyboardShortcut("'", modifiers: .command)
             }
             .opacity(0)
             .allowsHitTesting(false)
