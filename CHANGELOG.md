@@ -3,6 +3,31 @@
 Все заметные изменения проекта NoteSearch документируются в этом файле.
 Формат основан на [Keep a Changelog](https://keepachangelog.com/ru-RU/1.1.0/), а версии используют [Semantic Versioning](https://semver.org/lang/ru/).
 
+
+## [1.1.0] — 2026-10-13
+
+### Добавлено
+
+- Кнопка с иконкой кавычек рядом с полем поиска: одним нажатием оборачивает запрос в `"..."` для поиска точной фразы (#1).
+- Горячая клавиша `⌘'` выполняет то же действие с клавиатуры.
+- Повторное нажатие снимает кавычки, так что можно быстро переключаться между широким поиском по словам и точным поиском по фразе.
+- Unit-тесты `ExactPhraseTests` (9 тестов): обёртывание, снятие кавычек, пустые запросы и разбор результата через `QueryParser`.
+
+### Изменено
+
+- Логика переключения кавычек вынесена в `ExactPhrase.toggle(_:)` в `SearchModels.swift`, чтобы её можно было тестировать в `NoteSearchCore`.
+
+### Подтверждено
+
+- `swift test`: 95 тестов, 0 ошибок.
+- Release-артефакты для версии `1.0.0` созданы:
+  - `NoteSearch-1.1.0-arm64.zip`;
+  - `NoteSearch-1.1.0-arm64.dmg`;
+  - `SHA256SUMS.txt`.
+- Контрольные суммы ZIP и DMG проверены успешно.
+- Bundle ID: `ru.vincento.NoteSearch`.
+- Архитектура релизной сборки: `arm64`.
+
 ## [1.0.0] — 2026-10-05
 
 Первый публичный релиз нативного macOS-приложения NoteSearch.
@@ -62,5 +87,6 @@
 - Поддержка дополнительных форматов после стабилизации MVP.
 - Улучшение документации и обратной связи пользователей.
 
-[Unreleased]: https://github.com/USERNAME/REPOSITORY/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/USERNAME/REPOSITORY/releases/tag/v1.0.0
+[Unreleased]: https://github.com/Wwwoper/NoteSearch/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/Wwwoper/NoteSearch/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/Wwwoper/NoteSearch/releases/tag/v1.0.0

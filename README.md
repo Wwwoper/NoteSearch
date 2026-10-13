@@ -161,6 +161,7 @@ open ~/Library/Developer/Xcode/DerivedData/NoteSearch-*/Build/Products/Debug/Not
 |---|---|
 | Показать или скрыть панель | глобальное сочетание (по умолчанию `⌘⌥Space`) |
 | Фокус на поле поиска | `⌘K` |
+| Обернуть запрос в кавычки (точная фраза) / снять кавычки | `⌘'` | 
 | Следующий результат | `↓` |
 | Предыдущий результат | `↑` |
 | Открыть файл | `Enter` |
@@ -540,8 +541,8 @@ VERSION=1.0.1 bash scripts/release.sh
 
 ```text
 dist/
-├── NoteSearch-1.0.0-arm64.zip
-├── NoteSearch-1.0.0-arm64.dmg
+├── NoteSearch-1.1.0-arm64.zip
+├── NoteSearch-1.1.0-arm64.dmg
 └── SHA256SUMS.txt
 ```
 
@@ -556,13 +557,13 @@ shasum -a 256 -c SHA256SUMS.txt
 open build/release/Build/Products/Release/NoteSearch.app
 
 # Открыть DMG и проверить содержимое
-open dist/NoteSearch-1.0.0-arm64.dmg
+open dist/NoteSearch-1.1.0-arm64.dmg
 ```
 
 ### Важно
 
 
-Первый публичный релиз: **v1.0.0** (ad-hoc, arm64). Исходный код, ZIP и DMG доступны на странице Releases.
+Первый публичный релиз: **v1.1.0** (ad-hoc, arm64). Исходный код, ZIP и DMG доступны на странице Releases.
 
 Это **ad-hoc сборка** без Developer ID и нотаризации. После скачивания на другом Mac macOS может потребовать:
 

@@ -282,13 +282,9 @@ final class AppState: ObservableObject {
         }
     }
     func toggleExactPhrase() {
-        let q = searchQuery.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !q.isEmpty else { return }
-        if q.count >= 2, q.hasPrefix("\""), q.hasSuffix("\"") {
-            searchQuery = String(q.dropFirst().dropLast())
-        } else {
-            searchQuery = "\"\(q)\""
-        }
-        focusTick += 1 // вернуть фокус в поле
-}
+        let result = ExactPhrase.toggle(searchQuery)
+        guard result != searchQuery else { return }
+        searchQuery = result
+        focusTick += 1
+    }
 }

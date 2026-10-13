@@ -59,3 +59,14 @@ struct SearchSnippet: Identifiable {
         self.codeLanguage = codeLanguage
     }
 }
+enum ExactPhrase {
+    /// Оборачивает запрос в кавычки, а если он уже в кавычках, снимает их.
+    static func toggle(_ query: String) -> String {
+        let q = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !q.isEmpty else { return query }
+        if q.count >= 2, q.hasPrefix("\""), q.hasSuffix("\"") {
+            return String(q.dropFirst().dropLast())
+        }
+        return "\"\(q)\""
+    }
+}
