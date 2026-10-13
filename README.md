@@ -2,9 +2,11 @@
 
 Нативное приложение для macOS, которое мгновенно ищет по тексту заметок и документов в **одном выбранном каталоге**. Вызывается глобальным сочетанием клавиш, показывает список файлов и контекст найденного места с подсветкой, а Enter открывает файл в привычной программе.
 
-![macOS 14+](https://img.shields.io/badge/macOS-14%2B-blue)
-![Swift 5.9+](https://img.shields.io/badge/Swift-5.9%2B-orange)
-![SQLite FTS5](https://img.shields.io/badge/SQLite-FTS5-lightgrey)
+[![Release](https://img.shields.io/github/v/release/Wwwoper/NoteSearch?label=release&color=blue)](https://github.com/Wwwoper/NoteSearch/releases/latest)
+![Platform](https://img.shields.io/badge/macOS%2014%2B-Apple%20Silicon-blue)
+![Swift](https://img.shields.io/badge/Swift-5.9%2B-lightgrey)
+[![License](https://img.shields.io/github/license/Wwwoper/NoteSearch?color=lightgrey)](LICENSE)
+[![Changelog](https://img.shields.io/badge/changelog-история%20изменений-lightgrey)](CHANGELOG.md)
 
 ## Содержание
 
